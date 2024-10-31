@@ -657,7 +657,7 @@ Análisis de la Varianza ( ANOVA ) es una fórmula estadística que se utiliza p
 
 [ANOVA análisis de varianza para comparar múltiples medias](https://rpubs.com/Joaquin_AR/219148)
 
-[Iniciación a la visualización de datos ggplot](hhttps://www.uv.es/vcoll/Temas_AED/4_Visualizacion_datos.html)
+[Iniciación a la visualización de datos ggplot](https://www.uv.es/vcoll/Temas_AED/4_Visualizacion_datos.html)
 
 [Gráfico de barras](https://bookdown.org/jboscomendoza/r-principiantes4/graficas-de-barras.html)
 
