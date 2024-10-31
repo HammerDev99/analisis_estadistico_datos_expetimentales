@@ -22,5 +22,5 @@ El proyecto tiene como objetivo analizar la variabilidad entre grupos experiment
 
 ### Estructura del Proyecto
 
-- **src/**: Contiene los pantallazos
-- **Analisis_estadistico_R.md**: Incluye los todo el proceso realizado
+- **[src/](https://github.com/HammerDev99/analisis_estadistico_datos_expetimentales/tree/main/src)**: Contiene los pantallazos capturados durante la realización del análisis.
+- **[Analisis_estadistico_R.md]([http://example.net/](https://github.com/HammerDev99/analisis_estadistico_datos_expetimentales/blob/main/Analisis_estadistico_R.md))**: Incluye los todos los pasos realizados para la realización del análisis.
