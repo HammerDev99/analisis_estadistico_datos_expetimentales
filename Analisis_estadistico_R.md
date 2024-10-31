@@ -47,11 +47,11 @@ class(datos_experimento[[1]]) # Comando para ver el tipo de dato de la columna 1
 
 Dataset:
 
-![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%2011.50.16%20a. m..png)
+![alt](src/Captura1.png)
 
 El resumen de los datos:
 
-![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%2012.02.49%20p. m..png)
+![alt](src/Captura2.png)
 
 ## Estudio de los datos
 
@@ -61,19 +61,19 @@ El resumen de los datos:
   plot(aggregate(datos_experimento$ColonizacionHMA ~ datos_experimento$Tratamiento, data = datos_experimento, FUN = mean))
   ```
 
-  ![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%202.23.05%20p. m..png)
+  ![alt](src/Captura3.png)
 
   ```r
   plot(aggregate(datos_experimento$P_Foliar ~ datos_experimento$Tratamiento, data = datos_experimento, FUN = mean))
   ```
 
-  ![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%202.24.18%20p. m..png)
+  ![alt](src/Captura4.png)
 
   ```r
   plot(aggregate(datos_experimento$PesoSeco ~ datos_experimento$Tratamiento, data = datos_experimento, FUN = mean))
   ```
 
-  ![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%202.25.30%20p. m..png)
+  ![alt](src/Captura5.png)
 
 - **Distribución de los datos de forma creciente**
   
@@ -83,7 +83,7 @@ El resumen de los datos:
     ggplot(data = datos_experimento, aes(x = reorder(Tratamiento, +ColonizacionHMA), y = ColonizacionHMA, color = Tratamiento)) + geom_boxplot() + theme_bw()
     ```
 
-    ![alt](src/Captura%20de%20Pantalla%202023-06-11%20a%20la(s)%207.38.02%20p. m..png)
+    ![alt](src/Captura6.png)
 
   - P_Foliar
 
@@ -91,7 +91,7 @@ El resumen de los datos:
     ggplot(data = datos_experimento, aes(x = reorder(Tratamiento, +P_Foliar), y = P_Foliar, color = Tratamiento)) + geom_boxplot() + theme_bw()
     ```
 
-    ![alt](src/Captura%20de%20Pantalla%202023-06-11%20a%20la(s)%207.38.45%20p. m..png)
+    ![alt](src/Captura7.png)
 
   - PesoSeco
 
@@ -99,7 +99,7 @@ El resumen de los datos:
     ggplot(data = datos_experimento, aes(x = reorder(Tratamiento, +PesoSeco), y = PesoSeco, color = Tratamiento)) + geom_boxplot() + theme_bw()
     ```
 
-    ![alt](src/Captura%20de%20Pantalla%202023-06-11%20a%20la(s)%207.39.31%20p. m..png)
+    ![alt](src/Captura8.png)
 
 - **Frecuencia de los datos**
 
@@ -108,21 +108,21 @@ El resumen de los datos:
 ggplot(datos_experimento, aes(x = datos_experimento$ColonizacionHMA)) + geom_histogram(bins = 20, color = "white", fill = "blue")
 ```
 
-![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%203.30.25%20p. m..png)
+![alt](src/Captura9.png)
 
 ```r
 # Frecuencia de P_Foliar
 ggplot(datos_experimento, aes(x = datos_experimento$P_Foliar)) + geom_histogram(bins = 20, color = "white", fill = "blue")
 ```
 
-![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%203.33.49%20p. m..png)
+![alt](src/Captura10.png)
 
 ```r
 # Frecuencia de PesoSeco
 ggplot(datos_experimento, aes(x = datos_experimento$PesoSeco)) + geom_histogram(bins = 20, color = "white", fill = "blue")
 ```
 
-![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%203.34.42%20p. m..png)
+![alt](src/Captura11.png)
 
 - **Tabla de medias en orden ascendente**
 
@@ -135,7 +135,7 @@ ggplot(datos_experimento, aes(x = datos_experimento$PesoSeco)) + geom_histogram(
   ggplot(tabla_medias_col, aes(x = reorder(`datos_experimento$Tratamiento`,`datos_experimento$ColonizacionHMA`), y = `datos_experimento$ColonizacionHMA`)) + geom_bar(stat="identity", color='black',fill='transparent') + theme_bw()
   ```
 
-  ![alt](src/Captura%20de%20Pantalla%202023-06-11%20a%20la(s)%207.51.19%20p. m..png)
+  ![alt](src/Captura12.png)
 
   ```r
   # P_Foliar
@@ -146,7 +146,7 @@ ggplot(datos_experimento, aes(x = datos_experimento$PesoSeco)) + geom_histogram(
   ggplot(tabla_medias_pfo, aes(x = reorder(`datos_experimento$Tratamiento`,`datos_experimento$P_Foliar`), y = `datos_experimento$P_Foliar`)) + geom_bar(stat="identity", color='black',fill='transparent') + theme_bw()
   ```
 
-  ![alt](src/Captura%20de%20Pantalla%202023-06-11%20a%20la(s)%207.49.41%20p. m..png)
+  ![alt](src/Captura13.png)
 
   ```r
   # PesoSeco
@@ -157,7 +157,7 @@ ggplot(datos_experimento, aes(x = datos_experimento$PesoSeco)) + geom_histogram(
   ggplot(tabla_medias_col, aes(x = reorder(`datos_experimento$Tratamiento`,`datos_experimento$PesoSeco`), y = `datos_experimento$PesoSeco`)) + geom_bar(stat="identity", color='black',fill='transparent') + theme_bw()
   ```
 
-  ![alt](src/Captura%20de%20Pantalla%202023-06-11%20a%20la(s)%207.50.09%20p. m..png)
+  ![alt](src/Captura14.png)
 
 ## Análisis de varianza (ANOVA) y prueba de rangos múltiples con (TUKEY)
 
@@ -175,7 +175,7 @@ Análisis de la Varianza ( ANOVA ) es una fórmula estadística que se utiliza p
 
   Resultado:
 
-  ![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%2012.17.49%20p. m..png)
+  ![alt](src/Captura15.png)
 
   ```r
   summary(modelo_anova_col)
@@ -183,7 +183,7 @@ Análisis de la Varianza ( ANOVA ) es una fórmula estadística que se utiliza p
 
   Resultado:
 
-  ![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%2012.18.16%20p. m..png)
+  ![alt](src/Captura16.png)
 
 - **TUKEY**
 
@@ -280,7 +280,7 @@ Análisis de la Varianza ( ANOVA ) es una fórmula estadística que se utiliza p
 
   Resultado:
 
-  ![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%201.47.41%20p. m..png)
+  ![alt](src/Captura17.png)
 
   ```r
   summary(modelo_anova_pfoliar)
@@ -288,7 +288,7 @@ Análisis de la Varianza ( ANOVA ) es una fórmula estadística que se utiliza p
 
   Resultado:
 
-  ![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%201.48.28%20p. m..png)
+  ![alt](src/Captura18.png)
 
 - **TUKEY**
 
@@ -385,7 +385,7 @@ Análisis de la Varianza ( ANOVA ) es una fórmula estadística que se utiliza p
 
   Resultado:
 
-  ![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%201.52.49%20p. m..png)
+  ![alt](src/Captura19.png)
 
   ```r
   summary(modelo_anova_pesoseco)
@@ -393,7 +393,7 @@ Análisis de la Varianza ( ANOVA ) es una fórmula estadística que se utiliza p
 
   Resultado:
 
-  ![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%201.53.51%20p. m..png)
+  ![alt](src/Captura20.png)
 
 - **TUKEY**
 
@@ -489,13 +489,13 @@ Análisis de la Varianza ( ANOVA ) es una fórmula estadística que se utiliza p
 
   Resultado:
 
-    ![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%202.06.23%20p. m..png)
+    ![alt](src/Captura21.png)
 
-    ![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%202.07.04%20p. m..png)
+    ![alt](src/Captura22.png)
 
-    ![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%202.07.31%20p. m..png)
+    ![alt](src/Captura23.png)
 
-    ![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%202.07.59%20p. m..png)
+    ![alt](src/Captura24.png)
 
   ```r
   plot(TukeyHSD(modelo_anova_col))
@@ -503,7 +503,7 @@ Análisis de la Varianza ( ANOVA ) es una fórmula estadística que se utiliza p
   
   Resultado:
 
-    ![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%202.09.46%20p. m..png)
+    ![alt](src/Captura25.png)
 
 - **P_Foliar**
 
@@ -513,13 +513,13 @@ Análisis de la Varianza ( ANOVA ) es una fórmula estadística que se utiliza p
 
   Resultado:
 
-    ![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%202.11.31%20p. m..png)
+    ![alt](src/Captura26.png)
 
-    ![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%202.12.02%20p. m..png)
+    ![alt](src/Captura27.png)
 
-    ![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%202.12.24%20p. m..png)
+    ![alt](src/Captura28.png)
 
-    ![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%202.12.46%20p. m..png)
+    ![alt](src/Captura29.png)
 
   ```r
   plot(TukeyHSD(modelo_anova_pfoliar))
@@ -527,7 +527,7 @@ Análisis de la Varianza ( ANOVA ) es una fórmula estadística que se utiliza p
   
   Resultado:
 
-    ![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%202.13.19%20p. m..png)
+    ![alt](src/Captura30.png)
 
 - **PesoSeco**
 
@@ -537,13 +537,13 @@ Análisis de la Varianza ( ANOVA ) es una fórmula estadística que se utiliza p
 
   Resultado:
 
-    ![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%202.14.45%20p. m..png)
+    ![alt](src/Captura31.png)
 
-    ![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%202.15.14%20p. m..png)
+    ![alt](src/Captura32.png)
 
-    ![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%202.15.41%20p. m..png)
+    ![alt](src/Captura33.png)
 
-    ![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%202.16.02%20p. m..png)
+    ![alt](src/Captura34.png)
 
   ```r
   plot(TukeyHSD(modelo_anova_pesoseco))
@@ -551,7 +551,7 @@ Análisis de la Varianza ( ANOVA ) es una fórmula estadística que se utiliza p
   
   Resultado:
 
-    ![alt](src/Captura%20de%20Pantalla%202023-06-09%20a%20la(s)%202.16.27%20p. m..png)
+    ![alt](src/Captura35.png)
 
 ## Análisis post-hoc: pruebas de separación de medias (Prueba Tukey para las medias por tratamiento)
 
@@ -587,7 +587,7 @@ Análisis de la Varianza ( ANOVA ) es una fórmula estadística que se utiliza p
   cld_pfo <- multcompLetters4(modelo_anova_pfoliar, tukey_pfo)
   ```
 
-  ![alt](src/Captura%20de%20Pantalla%202023-06-10%20a%20la(s)%201.02.55%20p. m..png)
+  ![alt](src/Captura36.png)
 
 - Creación de tabla con los datos resumidos y las letras
 
@@ -598,14 +598,14 @@ Análisis de la Varianza ( ANOVA ) es una fórmula estadística que se utiliza p
   Tk_col <- group_by(datos_experimento, datos_experimento$Tratamiento) %>% summarise(mean=mean(datos_experimento$ColonizacionHMA), quant = quantile(datos_experimento$ColonizacionHMA, probs = 0.75)) %>% arrange(desc(mean))
   ```
 
-  ![alt](src/Captura%20de%20Pantalla%202023-06-11%20a%20la(s)%206.26.33%20p. m..png)
+  ![alt](src/Captura37.png)
 
   ```r
   # P_Foliar
   Tk_pfo <- group_by(datos_experimento, datos_experimento$Tratamiento) %>% summarise(mean=mean(datos_experimento$P_Foliar), quant = quantile(datos_experimento$P_Foliar, probs = 0.75)) %>% arrange(desc(mean))
   ```
 
-  ![alt](src/Captura%20de%20Pantalla%202023-06-11%20a%20la(s)%206.27.02%20p. m..png)
+  ![alt](src/Captura38.png)
 
   - Obtener letras y agregar a la tabla creada
 
@@ -616,7 +616,7 @@ Análisis de la Varianza ( ANOVA ) es una fórmula estadística que se utiliza p
   print(Tk_col)
   ```
 
-  ![alt](src/Captura%20de%20Pantalla%202023-06-10%20a%20la(s)%201.26.19%20p. m..png)
+  ![alt](src/Captura39.png)
 
   ```r
   # P_Foliar
@@ -625,7 +625,7 @@ Análisis de la Varianza ( ANOVA ) es una fórmula estadística que se utiliza p
   print(Tk_pfo)
   ```
 
-  ![alt](src/Captura%20de%20Pantalla%202023-06-11%20a%20la(s)%206.31.58%20p. m..png)
+  ![alt](src/Captura40.png)
 
 - Boxplots coloreados y **ordenados de forma creciente** según el factor (variable explicativa)
 
@@ -634,14 +634,14 @@ Análisis de la Varianza ( ANOVA ) es una fórmula estadística que se utiliza p
   ggplot(datos_experimento, aes(x = reorder(Tratamiento, +ColonizacionHMA), y = ColonizacionHMA)) + geom_boxplot(aes(fill = Tratamiento)) + labs(x="Tipo de tratamiento", y="Colonizacion (HMA)") + theme_bw() + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) + geom_text(data = Tk_col, aes(x = `datos_experimento$Tratamiento`, y = quant, label = cld_col), size = 4)
   ```
 
-  ![alt](src/Captura%20de%20Pantalla%202023-06-11%20a%20la(s)%207.34.19%20p. m..png)
+  ![alt](src/Captura41.png)
 
   ```R
   # P_Foliar
   ggplot(datos_experimento, aes(x = reorder(Tratamiento, +P_Foliar), y = P_Foliar)) + geom_boxplot(aes(fill = Tratamiento), position = "dodge") + labs(x="Tipo de tratamiento", y="P_Foliar") + theme_bw() + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) + geom_text(data = Tk_pfo, aes(x = `datos_experimento$Tratamiento`, y = quant, label = cld_pfo), size = 4)
   ```
 
-  ![alt](src/Captura%20de%20Pantalla%202023-06-11%20a%20la(s)%207.34.48%20p. m..png)
+  ![alt](src/Captura42.png)
 
 ## Conclusiones
 
