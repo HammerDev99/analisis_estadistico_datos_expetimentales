@@ -1,0 +1,2 @@
+# analisis_estadistico_datos_expetimentales
+Análisis estadístico de datos experimentales
